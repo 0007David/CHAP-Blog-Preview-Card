@@ -1,8 +1,97 @@
-.attribution {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+:root {
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray500: hsl(0, 0%, 42%);
+    --clr-Gray950: hsl(0, 0%, 7%);
+
+
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: Figtree;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: var(--clr-yellow);
+}
+
+main {
+    background: var(--clr-white);
+}
+
+.card {
+    /* width: 70%; */
+    /* height: 70%; */
+    width: 21rem;
+
+}
+
+.card-header {
+    padding: 1rem;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header>img {
+    width: 320px;
+}
+
+.card-header>button {
+    margin-top: 1rem;
+    white-space: nowrap;
+    width: auto;
+    border: none;
+    background-color: var(--clr-yellow);
+    /* padding: 2rem, 2rem; */
+    margin: 1rem 6rem 1rem 0;
+}
+
+.card-body {
+    padding: 1rem;
+    /* background: lightblue; */
+    /* text-align: left; */
+}
+
+.card-body>h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.description {
+    margin-bottom: 1.5rem;
+}
+
+.card-body>img {
+    width: 40px;
+}
+
+.avatar-name {
+    display: inline;
+
+}
+
+
+
+/* .attribution {
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
-}
+} */
