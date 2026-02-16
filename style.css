@@ -16,19 +16,19 @@
     --clr-Gray950: hsl(0, 0%, 7%);
 }
 
-html,
+/* html, */
 body {
     font-size: 14px;
     font-family: Figtree;
     color: var(--clr-Gray950);
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: var(--clr-yellow);
 }
 
 main {
-    margin-top: 100px;
     background: var(--clr-white);
     border-radius: 20px;
     box-shadow: 7px 7px;
