@@ -1,12 +1,25 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 @font-face {
-    font-family: Figtree;
-    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+    font-family: "Figtree";
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
 }
 
 :root {
@@ -14,17 +27,20 @@
     --clr-white: hsl(0, 0%, 100%);
     --clr-gray500: hsl(0, 0%, 42%);
     --clr-Gray950: hsl(0, 0%, 7%);
+
+    --fs-body: 14px;
+    --fs-body-mobil: 16px;
 }
 
-/* html, */
+html,
 body {
-    font-size: 14px;
-    font-family: Figtree;
+    font-size: var(--fs-body);
+    font-family: "Figtree", sans-serif;
     color: var(--clr-Gray950);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--clr-yellow);
 }
 
@@ -51,15 +67,17 @@ main {
 }
 
 .card-body__btn {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1rem;
+    padding-right: .8rem;
+    padding-left: .8rem;
     display: block;
-    width: 82px;
+    width: 80px;
     height: 30px;
     border: none;
     border-radius: 4px;
     background-color: var(--clr-yellow);
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: .9rem;
+    font-weight: 800;
 }
 
 .card-body__published_date {
@@ -81,28 +99,27 @@ main {
 
 .card-autor {
     display: flex;
-    margin: 0 1.5rem 1rem 1.5rem;
+    margin: 0 1.5rem 0 1.5rem;
     align-items: center;
 }
 
 .card-autor__img {
     width: 32px;
-    margin-right: 1.5rem;
+    margin-inline-end: 1.5rem;
 }
 
 .card-autor__name {
     color: var(--clr-Gray950);
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 
 /* Desktop */
-@media (min-width: 550px) {
+@media (min-width: 32.29rem) {
 
     html,
     body {
-        font-size: 16px;
-        /* background: hsl(212, 45%, 89%); */
+        font-size: var(--fs-body-mobil);
     }
 
     .card {
@@ -120,21 +137,29 @@ main {
         margin: 0 1.5rem;
     }
 
+    .card-body__btn {
+        width: 100px;
+        height: 33px;
+    }
+
     .card-body__published_date {
         font-size: 0.925rem;
     }
 
     .card-body__title {
+        font-weight: 800;
         margin: 1rem 0;
     }
 
     .card-body__description {
+        font-weight: 500;
+        color: var(--clr-gray500);
         margin-bottom: 1.2rem;
         line-height: 1.5rem;
     }
 
     .card-autor__img {
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
     }
 
 }
